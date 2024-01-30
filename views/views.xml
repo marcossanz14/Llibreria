@@ -1,0 +1,58 @@
+<odoo>
+    <data>
+        <!-- Vista para el modelo de Llibre -->
+        <record model="ir.ui.view" id="view_llibre_tree">
+            <field name="name">llibre.tree</field>
+            <field name="model">nombre_del_modulo.llibre</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nom"/>
+                    <field name="preu"/>
+                    <field name="exemplars"/>
+                    <field name="rotura_estoc"/>
+                    <field name="data"/>
+                    <field name="segonama"/>
+                    <field name="estat"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista para el formulario del modelo de Llibre -->
+        <record model="ir.ui.view" id="view_llibre_form">
+            <field name="name">llibre.form</field>
+            <field name="model">nombre_del_modulo.llibre</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="nom"/>
+                            <field name="preu"/>
+                            <field name="exemplars"/>
+                            <field name="rotura_estoc" readonly="1"/>
+                            <field name="data"/>
+                            <field name="segonama"/>
+                            <field name="estat"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Acción de ventana para el modelo de Llibre -->
+        <record model="ir.actions.act_window" id="action_llibre_window">
+            <field name="name">Listado de libros</field>
+            <field name="res_model">nombre_del_modulo.llibre</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menú principal -->
+        <menuitem name="Listado de libros" id="menu_llibre_root"/>
+
+        <!-- Categorías de menú -->
+        <menuitem name="Opciones Lista Libros" id="menu_llibre_1" parent="menu_llibre_root"/>
+
+        <!-- Acciones de menú -->
+        <menuitem name="Mostrar lista" id="menu_llibre_1_list" parent="menu_llibre_1"
+                  action="action_llibre_window"/>
+    </data>
+</odoo>
