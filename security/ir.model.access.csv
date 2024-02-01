@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_llibreria_llibreria,llibreria.llibreria,model_llibreria_llibre,base.group_user,1,1,1,1
-access_llibreria_llibreria,llibreria.llibreria,model_llibreria_categoria,base.group_user,1,1,1,1
+access_llibreria_llibreria,llibreria.llibre,model_llibreria_llibre,base.group_user,1,1,1,1
+access_llibreria_llibreria_2,llibreria.categoria,model_llibreria_categoria,base.group_user,1,1,1,1

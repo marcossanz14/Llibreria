@@ -85,10 +85,6 @@
         <!-- Acciones de menú -->
         <menuitem name="Mostrar lista" id="menu_llibre_1_list" parent="menu_llibre_1" action="action_llibre_window"/>
 
-        <menuitem name="Listado de Categorias" id="menu_categoria_root"/>
-
-        <menuitem name="Opciones Lista Categorias" id="menu_categoria_1" parent="menu_categoria_root"/>
-
-        <menuitem name="Mostrar categorias" id="menu_categorias_1" parent="menu_categoria_1" action="action_categoria_window"/>
+        <menuitem name="Categorias" id="menu_categorias_1" parent="menu_llibre_1" action="action_categoria_window"/>
     </data>
 </odoo>
