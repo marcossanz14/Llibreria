@@ -15,11 +15,10 @@ class Llibre(models.Model):
     preu = fields.Float(string='Preu')
     exemplars = fields.Integer(string='Exemplars')
     rotura_estoc = fields.Boolean(string='Rotura Estoc', compute='_hi_ha_estoc')
-    data = fields.Data(string='Data')
+    data = fields.Date(string='Data')
     segonama = fields.Boolean(string='Segonama')
-    estat = fields.Selection([('bo', 'Bo'), ('regular', 'Regular'), ('dolent', 'Dolent')],
-                             string='Estat', default='bo')
+    estat = fields.Selection([('bo', 'Bo'), ('regular', 'Regular'), ('dolent', 'Dolent')], string='Estat', default='bo')
 
     def _hi_ha_estoc(self):
-    	for record in self:
-			record.rotura_estoc = record.exemplars < 10
+      for record in self:
+        record.rotura_estoc = record.exemplars < 10

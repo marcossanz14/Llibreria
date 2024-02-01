@@ -3,7 +3,7 @@
         <!-- Vista para el modelo de Llibre -->
         <record model="ir.ui.view" id="view_llibre_tree">
             <field name="name">llibre.tree</field>
-            <field name="model">nombre_del_modulo.llibre</field>
+            <field name="model">llibreria.llibre</field>
             <field name="arch" type="xml">
                 <tree>
                     <field name="nom"/>
@@ -20,7 +20,7 @@
         <!-- Vista para el formulario del modelo de Llibre -->
         <record model="ir.ui.view" id="view_llibre_form">
             <field name="name">llibre.form</field>
-            <field name="model">nombre_del_modulo.llibre</field>
+            <field name="model">llibreria.llibre</field>
             <field name="arch" type="xml">
                 <form>
                     <sheet>
@@ -41,7 +41,7 @@
         <!-- Acción de ventana para el modelo de Llibre -->
         <record model="ir.actions.act_window" id="action_llibre_window">
             <field name="name">Listado de libros</field>
-            <field name="res_model">nombre_del_modulo.llibre</field>
+            <field name="res_model">llibreria.llibre</field>
             <field name="view_mode">tree,form</field>
         </record>
 
